@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Question Box
 
-## Getting Started
+## Description
 
-First, run the development server:
+An in-memory companies' survey application.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![question box project hero](https://raw.githubusercontent.com/jordanlepera/question-box/main/public/hero.png)
+
+### Users
+
+- **admin**:
+  - Email: john.doe@test.com
+  - Password: password
+- **user**:
+  - Email: john.doe2@test.com
+  - Password: password2
+
+## Features
+
+- Sign up
+- Sign in
+- Sign out
+- Quiz answering
+- Admin dashboard
+- CRUD on quiz (create, read, update, delete)
+- Quiz results
+
+## Tools
+
+- TypeScript
+- Next.js 14 (front-end framework)
+- Tailwind CSS (CSS processor)
+- Shadcn-UI (components generation)
+- Aceternity-UI (amazing components library)
+- Zustand (state management)
+- Zod (data validations)
+
+## Installation
+
+1. Install pnpm:
+
+```
+npm install -g pnpm
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2 - install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3 - development
 
-## Learn More
+```
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4 - build and production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+pnpm build
+pnpm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Project architecture
 
-## Deploy on Vercel
+```
+.
+└── question-box/
+    ├── public
+    ├── src/
+    │   ├── app/
+    │   │   ├── dashboard - /dashboard route
+    │   │   ├── quiz - /quiz route
+    │   │   ├── signin - /signin route
+    │   │   ├── signup - /signup route
+    │   │   ├── favicon.ico
+    │   │   ├── global.css - tailwind global css file
+    │   │   ├── layout.tsx - Root layout
+    │   │   └── page.tsx - / route
+    │   ├── components/
+    │   │   ├── Dashboard
+    │   │   ├── Logo
+    │   │   ├── Quiz
+    │   │   ├── QuizList
+    │   │   ├── QuizResults
+    │   │   ├── SignIn
+    │   │   ├── SignUp
+    │   │   └── ui - shadcn-ui generated components & aceternity-ui components
+    │   ├── lib/
+    │   │   ├── store.ts - zustand store
+    │   │   └── utils.ts - shadcn-ui utils
+    │   └── mock/
+    │       └── data.ts - types & mock for initial data
+    ├── .eslint.json
+    ├── .gitignore
+    ├── .prettierignore
+    ├── .prettierrc
+    ├── components.json - shadcn-ui config file
+    ├── package.json
+    ├── postcss.config.mjs - postcss config file
+    ├── README.md
+    ├── tailwind.config.ts - taillwindcss config file
+    └── tsconfig.json - typescript config file
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Jordane LE PERA
