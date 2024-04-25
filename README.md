@@ -4,7 +4,7 @@
 
 An in-memory companies' survey application.
 
-![question box project hero](https://raw.githubusercontent.com/jordanlepera/question-box/main/public/hero.png)
+![question box project hero](https://github.com/jordanlepera/question-box/blob/master/public/hero.png)
 
 ### Users
 
